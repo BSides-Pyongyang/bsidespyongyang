@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="archive-hero">
+  <div class="shell">
+    <p class="eyebrow">BSides Pyongyang</p>
+    <h1>{{ .Title }}</h1>
+    <div class="prose prose-large">{{ .Content }}</div>
+  </div>
+</section>
+<section class="section">
+  <div class="shell">
+    <div class="talk-list">
+      {{ range .Pages.ByTitle.Reverse }}
+      <article class="talk-card">
+        <div class="talk-copy">
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Description }}</p>
+        </div>
+        <a class="button button-secondary" href="{{ .RelPermalink }}">View <span aria-hidden="true">&#8594;</span></a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+

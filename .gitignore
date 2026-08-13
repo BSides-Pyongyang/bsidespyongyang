@@ -1,0 +1,23 @@
+# Hugo output and resource cache
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# Cloudflare local state and secrets
+/.wrangler/
+/.dev.vars
+/.dev.vars.*
+/.env
+/.env.*
+!.env.example
+
+# Node dependencies and local tooling
+/node_modules/
+npm-debug.log*
+
+# Editor and operating-system files
+.DS_Store
+.claude/
+.codex/
+.idea/
+.vscode/

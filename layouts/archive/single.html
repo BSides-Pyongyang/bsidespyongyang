@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section class="archive-hero">
+  <div class="shell archive-hero-grid">
+    <div>
+      <p class="eyebrow">{{ .Params.eventDate }}</p>
+      <h1>{{ .Title }}</h1>
+      <div class="prose prose-large">{{ .Content }}</div>
+      <a class="button button-primary" href="{{ .Params.playlist }}" target="_blank" rel="noopener noreferrer">Watch the full playlist <span aria-hidden="true">&#8599;</span></a>
+    </div>
+    <figure class="archive-logo">
+      <img src="{{ "/images/logo-2025.png" | relURL }}" alt="BSides Pyongyang 2025 logo" width="600" height="600">
+      <figcaption>2025 conference artwork</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section talks-section" id="talks">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">On demand</p>
+      <h2>All nine talks.</h2>
+    </div>
+    <div class="talk-list">
+      {{ range $index, $talk := index site.Data.talks "2025" }}
+      <article class="talk-card">
+        <p class="talk-number">{{ printf "%02d" (add $index 1) }}</p>
+        <div class="talk-copy">
+          <h3>{{ $talk.title }}</h3>
+          <p class="talk-meta"><strong>{{ $talk.speaker }}</strong><span>{{ $talk.duration }}</span></p>
+          <p>{{ $talk.description }}</p>
+        </div>
+        <a class="button button-secondary" href="{{ $talk.video }}" target="_blank" rel="noopener noreferrer" aria-label="Watch {{ $talk.title }}">Watch <span aria-hidden="true">&#9654;</span></a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+

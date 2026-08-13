@@ -1,0 +1,19 @@
+baseURL = "https://bsidespyongyang.com/"
+languageCode = "en-us"
+title = "BSides Pyongyang"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  description = "A virtual security conference focused on cybersecurity research connected to the DPRK."
+  contactEmail = "bsidespyongyang@gmail.com"
+  currentEvent = "2026"
+  socialImage = "/social/bsides-pyongyang.jpg"
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+
