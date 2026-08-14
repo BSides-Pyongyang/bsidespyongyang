@@ -1,5 +1,11 @@
 {{- $description := .Description | default site.Params.description -}}
 {{- $socialImage := .Params.socialImage | default site.Params.socialImage | absURL -}}
+{{- $favicon := "/images/logo-2026.png" -}}
+{{- with .Params.year -}}
+  {{- if eq . 2025 -}}
+    {{- $favicon = "/images/logo-2025.png" -}}
+  {{- end -}}
+{{- end -}}
 {{- $css := resources.Get "css/site.css" | minify | fingerprint -}}
 {{- $js := resources.Get "js/site.js" | minify | fingerprint -}}
 <meta charset="utf-8">
@@ -17,8 +23,7 @@
 <meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ $description }}">
 <meta name="twitter:image" content="{{ $socialImage }}">
-<link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/png">
+<link rel="icon" href="{{ $favicon | relURL }}" type="image/png">
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
-

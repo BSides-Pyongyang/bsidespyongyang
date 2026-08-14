@@ -1,7 +1,13 @@
+{{- $logo := "/images/logo-2026.png" -}}
+{{- with .Params.year -}}
+  {{- if eq . 2025 -}}
+    {{- $logo = "/images/logo-2025.png" -}}
+  {{- end -}}
+{{- end -}}
 <header class="site-header" data-header>
   <div class="shell header-inner">
     <a class="wordmark" href="{{ "/" | relURL }}" aria-label="BSides Pyongyang home">
-      <span class="wordmark-mark" aria-hidden="true">BSPY</span>
+      <img class="wordmark-logo" src="{{ $logo | relURL }}" alt="" width="48" height="48">
       <span>BSides Pyongyang</span>
     </a>
     <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
@@ -21,4 +27,3 @@
     </div>
   </div>
 </header>
-

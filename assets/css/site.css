@@ -183,14 +183,12 @@ h3 {
   text-decoration: none;
 }
 
-.wordmark-mark {
-  display: grid;
-  width: 2.35rem;
-  height: 2.35rem;
-  place-items: center;
-  border: 2px solid currentColor;
-  font-family: var(--font-ui);
-  font-size: 0.58rem;
+.wordmark-logo {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -294,6 +292,23 @@ h3 {
 
 .home-hero .hero-content {
   padding-right: min(40vw, 28rem);
+}
+
+.home-hero-mark {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: max(1rem, calc((100vw - var(--shell)) / 2));
+  width: clamp(12rem, 22vw, 19rem);
+  margin: 0;
+  transform: translateY(-44%);
+  background: transparent;
+  filter: drop-shadow(0 20px 28px rgba(0, 0, 0, 0.28));
+}
+
+.home-hero-mark img {
+  display: block;
+  width: 100%;
 }
 
 .home-hero h1,
@@ -618,11 +633,11 @@ h3 {
 }
 
 .archive-logo img {
+  display: block;
   width: 100%;
   aspect-ratio: 1;
-  border: 1px solid var(--line);
-  background: #ffffff;
-  box-shadow: var(--shadow);
+  background: transparent;
+  filter: drop-shadow(0 16px 24px rgba(10, 24, 28, 0.18));
   object-fit: contain;
 }
 
@@ -809,6 +824,10 @@ h3 {
 
   .home-hero .hero-content {
     padding-right: 0;
+  }
+
+  .home-hero-mark {
+    display: none;
   }
 
   .image-hero {
