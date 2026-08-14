@@ -1,0 +1,17 @@
+<footer class="site-footer" id="contact">
+  <div class="shell footer-grid">
+    <div>
+      <p class="eyebrow">Stay in touch</p>
+      <h2>BSides Pyongyang</h2>
+      <a class="footer-email" href="mailto:{{ site.Params.contactEmail }}">{{ site.Params.contactEmail }}</a>
+    </div>
+    <nav class="social-links" aria-label="Social media">
+      {{ range site.Data.social }}
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}<span aria-hidden="true"> &#8599;</span></a>
+      {{ end }}
+    </nav>
+  </div>
+  <div class="shell footer-base">
+    <p>&copy; 2025-{{ now.Year }} BSides Pyongyang. All rights reserved.</p>
+  </div>
+</footer>

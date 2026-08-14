@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{ $event := index site.Data.events site.Params.currentEvent }}
+<section class="home-hero image-hero">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="shell hero-content">
+    <p class="eyebrow hero-reveal">Virtual security conference</p>
+    <h1 class="hero-reveal">BSides<br>Pyongyang</h1>
+    <p class="hero-date hero-reveal"><time datetime="{{ $event.date }}">{{ $event.date_display }}</time></p>
+    <div class="button-row hero-reveal">
+      <a class="button button-primary" href="{{ "/cfp/2026/" | relURL }}">Call for Papers <span aria-hidden="true">&#8594;</span></a>
+      <a class="button button-ghost" href="{{ "/archive/2025/" | relURL }}">Watch 2025 talks</a>
+    </div>
+  </div>
+  <figure class="home-hero-mark hero-reveal">
+    <img src="{{ $event.logo_image | relURL }}" alt="BSides Pyongyang 2026" width="1000" height="1016">
+  </figure>
+  <a class="hero-next" href="#about">About the conference <span aria-hidden="true">&#8595;</span></a>
+</section>
+
+<section class="section about-section" id="about">
+  <div class="shell split-layout">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>Research without borders.</h2>
+    </div>
+    <div class="prose prose-large">
+      {{ .Content }}
+      <p><a class="text-link" href="{{ "/archive/2025/" | relURL }}">Explore the 2025 talk archive <span aria-hidden="true">&#8594;</span></a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section event-section" id="conference">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">{{ $event.year }} conference</p>
+      <h2>2026.</h2>
+      <p>BSides Pyongyang returns online on {{ $event.date_display }}.</p>
+    </div>
+    <dl class="fact-grid">
+      <div><dt>Status</dt><dd>{{ $event.status }}</dd></div>
+      <div><dt>Date</dt><dd>{{ $event.date_display }}</dd></div>
+      <div><dt>CFP deadline</dt><dd>{{ $event.cfp.closes_display }}</dd></div>
+    </dl>
+    <div class="event-action">
+      <a class="button button-primary cfp-home-cta" href="{{ "/cfp/2026/" | relURL }}">View the Call for Papers <span aria-hidden="true">&#8594;</span></a>
+    </div>
+  </div>
+</section>
+{{ end }}

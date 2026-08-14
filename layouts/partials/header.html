@@ -1,0 +1,29 @@
+{{- $logo := "/images/logo-2026.png" -}}
+{{- with .Params.year -}}
+  {{- if eq . 2025 -}}
+    {{- $logo = "/images/logo-2025.png" -}}
+  {{- end -}}
+{{- end -}}
+<header class="site-header" data-header>
+  <div class="shell header-inner">
+    <a class="wordmark" href="{{ "/" | relURL }}" aria-label="BSides Pyongyang home">
+      <img class="wordmark-logo" src="{{ $logo | relURL }}" alt="" width="48" height="48">
+      <span>BSides Pyongyang</span>
+    </a>
+    <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
+      <a href="{{ "/#about" | relURL }}">About</a>
+      <a href="{{ "/cfp/2026/" | relURL }}">CFP</a>
+      <a href="{{ "/archive/2025/" | relURL }}">2025 talks</a>
+      <a href="{{ "/#contact" | relURL }}">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button theme-toggle" type="button" aria-label="Use dark theme" title="Change color theme" data-theme-toggle>
+        <span class="theme-icon theme-icon-light" aria-hidden="true">&#9728;</span>
+        <span class="theme-icon theme-icon-dark" aria-hidden="true">&#9790;</span>
+      </button>
+      <button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false" title="Open navigation" data-menu-toggle>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>

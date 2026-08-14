@@ -1,0 +1,47 @@
+# Hugo output and resource cache
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# Cloudflare local state and secrets
+/.wrangler/
+/.dev.vars
+/.dev.vars.*
+!/.dev.vars.example
+/.env
+/.env.*
+!.env.example
+/credentials/
+/secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Node dependencies, caches, logs, and test output
+/node_modules/
+/.cache/
+/.npm/
+/coverage/
+*.log
+*.log.*
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.claude/
+.codex/
+.agents/
+.continue/
+.cursor/
+.fleet/
+.idea/
+.vscode/
+.windsurf/
+.zed/
+*.swp
+*.swo
+*~

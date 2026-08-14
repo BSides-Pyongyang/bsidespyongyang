@@ -1,0 +1,11 @@
+- name: X
+  url: https://x.com/BSidesPyongyang
+- name: YouTube
+  url: https://www.youtube.com/@BSidesPyongyang
+- name: Twitch
+  url: https://www.twitch.tv/BSidesPyongyang
+- name: Instagram
+  url: https://www.instagram.com/bsidespyongyang/
+- name: LinkedIn
+  url: https://www.linkedin.com/company/bsidespyongyang/
+

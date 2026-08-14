@@ -1,0 +1,110 @@
+{{ define "main" }}
+{{ $event := index site.Data.events site.Params.currentEvent }}
+<section class="cfp-hero image-hero">
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="shell hero-content">
+    <p class="eyebrow">{{ $event.name }}</p>
+    <h1>Call for<br>Papers</h1>
+    <p class="hero-summary">Bring original DPRK-focused cybersecurity research to a global virtual audience on {{ $event.date_display }}.</p>
+    <p class="deadline">Submissions close <time datetime="{{ $event.cfp.closes }}">{{ $event.cfp.closes_display }}</time>.</p>
+    <div class="button-row">
+      <a class="button button-primary" href="{{ $event.cfp.form_url }}" target="_blank" rel="noopener noreferrer">Submit a proposal <span aria-hidden="true">&#8599;</span></a>
+      <a class="button button-ghost" href="{{ $event.cfp.pdf_url | relURL }}" download>Download CFP <span aria-hidden="true">PDF</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell split-layout">
+    <div>
+      <p class="eyebrow">The conference</p>
+      <h2>Research grounded in real work.</h2>
+    </div>
+    <div class="prose">{{ .Content }}</div>
+  </div>
+</section>
+
+<section class="section compact-section">
+  <div class="shell">
+    <dl class="fact-grid">
+      <div><dt>Format</dt><dd>{{ $event.format }}</dd></div>
+      <div><dt>Talk length</dt><dd>{{ $event.cfp.talk_length }}</dd></div>
+      <div><dt>Audience</dt><dd>Open to the public</dd></div>
+    </dl>
+    <p class="section-note">Speakers will also be invited to join attendees in Discord after their presentation to discuss their research.</p>
+  </div>
+</section>
+
+<section class="section timeline-section">
+  <div class="shell split-layout">
+    <div>
+      <p class="eyebrow">Timeline</p>
+      <h2>Key dates.</h2>
+    </div>
+    <dl class="timeline">
+      <div><dt>Call for Papers opens</dt><dd>{{ $event.cfp.opens_display }}</dd></div>
+      <div><dt>Submission deadline</dt><dd><strong>{{ $event.cfp.closes_display }}</strong></dd></div>
+      <div><dt>Notification of acceptance</dt><dd>{{ $event.cfp.notification_display }}</dd></div>
+      <div><dt>Slides deadline</dt><dd>{{ $event.cfp.slides_due_display }}</dd></div>
+      <div><dt>Conference</dt><dd>{{ $event.date_display }}</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell two-column-copy">
+    <div>
+      <p class="eyebrow">Submission guidelines</p>
+      <h2>What to send.</h2>
+      <ul class="detail-list">
+        <li><strong>Abstract:</strong> No more than 250 words, clearly outlining the presentation and its connection to the DPRK.</li>
+        <li><strong>Originality:</strong> Presentations must be original and not previously published or under consideration elsewhere.</li>
+        <li><strong>Classification:</strong> Content must be TLP:CLEAR because the conference is open to the public.</li>
+        <li><strong>Speaker information:</strong> Name, short bio, contact email, and Signal username.</li>
+        <li><strong>Talk information:</strong> Title, public abstract, and a detailed outline shared only with reviewers.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Review process</p>
+      <h2>How proposals are assessed.</h2>
+      <div class="prose">
+        <p>Reviewers evaluate submissions for alignment with the conference theme, originality, technical accuracy, significance, and contribution to the field.</p>
+        <p>Organizers may invite shortlisted speakers to a brief one-to-one video call while submissions are under review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section topics-section">
+  <div class="shell split-layout">
+    <div>
+      <p class="eyebrow">Topics of interest</p>
+      <h2>DPRK and cybersecurity.</h2>
+    </div>
+    <ul class="topic-list">
+      <li>Threat research and analysis</li>
+      <li>Case studies and incident response reports</li>
+      <li>Cryptocurrency</li>
+      <li>Smart contract security</li>
+      <li>IT worker life and skill building</li>
+      <li>Life in the Democratic People's Republic of Korea</li>
+      <li>Innovative techniques for patriotic Korean hackers</li>
+      <li>Persona development</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="shell cta-layout">
+    <div>
+      <p class="eyebrow">Deadline: {{ $event.cfp.closes_display }}</p>
+      <h2>Share your research.</h2>
+      <p>Questions can be sent to <a href="mailto:{{ site.Params.contactEmail }}">{{ site.Params.contactEmail }}</a>.</p>
+    </div>
+    <div class="button-row">
+      <a class="button button-primary" href="{{ $event.cfp.form_url }}" target="_blank" rel="noopener noreferrer">Submit a proposal <span aria-hidden="true">&#8599;</span></a>
+      <a class="button button-secondary" href="{{ $event.cfp.pdf_url | relURL }}" download>Download overview</a>
+    </div>
+  </div>
+</section>
+{{ end }}

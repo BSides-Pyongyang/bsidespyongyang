@@ -1,0 +1,46 @@
+- title: "(Un)Supreme Keynote: Bryson Bort"
+  speaker: Bryson Bort
+  duration: "28:14"
+  description: Opening keynote for the inaugural BSides Pyongyang conference.
+  video: https://www.youtube.com/watch?v=W3pfqUwpOv8&list=PL0l1gbNCthd4uZuJpnJFH0FpWTrtUg8fD
+- title: "North Korea's Zoo: Snakes, Crabs and Chollimas"
+  speaker: Mauro Eldritch
+  duration: "25:20"
+  description: A beginner-friendly reverse engineering tour of QRLog, Docks, and PyLangGhostRAT.
+  video: https://www.youtube.com/watch?v=cGjb-W4QV68&list=PL0l1gbNCthd4uZuJpnJFH0FpWTrtUg8fD
+- title: "Counterintelligence in the Age of JucheNet: Signals, Spoofs, and Subversion"
+  speaker: Metal Zero One / Jack Sessions
+  duration: "20:36"
+  description: How deception, false flags, and spoofed signals shape modern cyber counterintelligence.
+  video: https://www.youtube.com/watch?v=S6x8I0WD4p8&list=PL0l1gbNCthd4uZuJpnJFH0FpWTrtUg8fD
+- title: "Crypto Confiscation as a Service: The Glorious DPRK Approach to Borderless Wealth Reclamation"
+  speaker: Thomas (@HimugLamuh)
+  duration: "24:39"
+  description: Tracking blockchain transactions, liquidity pools, mixers, cross-chain bridges, and NFTs.
+  video: https://www.youtube.com/watch?v=WuCp2QV9bCI&list=PL0l1gbNCthd4uZuJpnJFH0FpWTrtUg8fD
+- title: "From Memecoins to Missiles: How North Korea Launders Stolen Crypto into Real World Riches"
+  speaker: Ian Gillespie
+  duration: "35:47"
+  description: Following stolen digital assets through laundering networks and into global financial markets.
+  video: https://www.youtube.com/watch?v=qIg1hcfJapY&list=PL0l1gbNCthd4uZuJpnJFH0FpWTrtUg8fD
+- title: "Cyber-Juche: How North Korean Self-Reliance Created a Global Hacking Force"
+  speaker: John Doyle & Caitlyn Leong
+  duration: "24:07"
+  description: The history, educational pipeline, and organizational evolution of North Korea's cyber programs.
+  video: https://www.youtube.com/watch?v=r3EEdNEvywk&list=PL0l1gbNCthd4uZuJpnJFH0FpWTrtUg8fD
+- title: "Who Watches the Workmen? Hacking Activity Targeting DPRK IT Workers"
+  speaker: Daniel Gordon
+  duration: "20:23"
+  description: Finding, pivoting on, and attributing a hacking cluster targeting North Korean IT workers.
+  video: https://www.youtube.com/watch?v=x4a24slACeU&list=PL0l1gbNCthd4uZuJpnJFH0FpWTrtUg8fD
+- title: Weaponizing Western Stupidity to Get Hired at the Fortune 50
+  speaker: rekdt
+  duration: "20:37"
+  description: How North Korean IT workers pressure hiring processes at large Western companies.
+  video: https://www.youtube.com/watch?v=WD0M3sbb528&list=PL0l1gbNCthd4uZuJpnJFH0FpWTrtUg8fD
+- title: "(Un)Supreme Keynote: Lena Yu"
+  speaker: Lena Yu
+  duration: "25:21"
+  description: Closing keynote for BSides Pyongyang 2025.
+  video: https://www.youtube.com/watch?v=ez7jtXZEgco&list=PL0l1gbNCthd4uZuJpnJFH0FpWTrtUg8fD
+
