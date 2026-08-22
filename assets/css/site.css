@@ -649,6 +649,71 @@ h3 {
   text-align: right;
 }
 
+.document-hero {
+  padding: calc(var(--header-height) + 5rem) 0 5rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-strong);
+}
+
+.document-shell {
+  max-width: 54rem;
+}
+
+.document-hero h1 {
+  max-width: 12ch;
+  margin-bottom: 1.5rem;
+}
+
+.document-summary {
+  max-width: 42rem;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+}
+
+.document-section {
+  padding-top: clamp(3.5rem, 7vw, 6rem);
+}
+
+.document-prose {
+  max-width: 50rem;
+}
+
+.document-prose > p:first-child {
+  color: var(--ink);
+  font-size: clamp(1.12rem, 2vw, 1.3rem);
+}
+
+.document-prose h2 {
+  margin: 3.75rem 0 1.25rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.document-prose ul {
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.document-prose li {
+  position: relative;
+  padding: 0.8rem 0 0.8rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.document-prose li::before {
+  position: absolute;
+  top: 1.45rem;
+  left: 0;
+  width: 0.42rem;
+  height: 0.42rem;
+  content: "";
+  background: var(--signal);
+}
+
 .talk-list {
   border-top: 1px solid var(--line);
 }
@@ -759,6 +824,21 @@ h3 {
 
 .footer-base p {
   margin: 0;
+}
+
+.footer-policy-links {
+  font-family: var(--font-ui);
+}
+
+.footer-policy-links a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.footer-policy-links a:hover {
+  color: #70c5db;
 }
 
 @media (max-width: 760px) {

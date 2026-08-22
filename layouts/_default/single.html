@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="document-page">
+  <header class="document-hero">
+    <div class="shell document-shell">
+      <p class="eyebrow">{{ .Params.eyebrow | default "BSides Pyongyang" }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="document-summary">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+  <section class="section document-section">
+    <div class="shell document-shell prose document-prose">
+      {{ .Content }}
+    </div>
+  </section>
+</article>
+{{ end }}
