@@ -3,7 +3,8 @@ name: BSides Pyongyang 2026
 date: 2026-11-18
 date_display: 18 November 2026
 format: Virtual
-status: CFP open
+status: Registration open
+registration_url: https://bsidespyongyang2026.eventbrite.com
 cfp:
   opens: 2026-08-01
   opens_display: 01 August 2026
@@ -18,3 +19,4 @@ cfp:
   pdf_url: /downloads/bsides-pyongyang-2026-cfp.pdf
 hero_image: /images/cfp-2026-classroom.jpg
 logo_image: /images/logo-2026.png
+brand_logo_image: /images/logo-brand.png

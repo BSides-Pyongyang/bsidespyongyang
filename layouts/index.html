@@ -7,8 +7,8 @@
     <h1 class="hero-reveal">BSides<br>Pyongyang</h1>
     <p class="hero-date hero-reveal"><time datetime="{{ $event.date }}">{{ $event.date_display }}</time></p>
     <div class="button-row hero-reveal">
-      <a class="button button-primary" href="{{ "/cfp/2026/" | relURL }}">Call for Papers <span aria-hidden="true">&#8594;</span></a>
-      <a class="button button-ghost" href="{{ "/archive/2025/" | relURL }}">Watch 2025 talks</a>
+      <a class="button button-primary" href="{{ "/2026/" | relURL }}">2026 conference <span aria-hidden="true">&#8594;</span></a>
+      <a class="button button-ghost" href="{{ $event.registration_url }}" target="_blank" rel="noopener noreferrer">Register <span aria-hidden="true">&#8599;</span></a>
     </div>
   </div>
   <figure class="home-hero-mark hero-reveal">
@@ -40,10 +40,11 @@
     <dl class="fact-grid">
       <div><dt>Status</dt><dd>{{ $event.status }}</dd></div>
       <div><dt>Date</dt><dd>{{ $event.date_display }}</dd></div>
-      <div><dt>CFP deadline</dt><dd>{{ $event.cfp.closes_display }}</dd></div>
+      <div><dt>Registration</dt><dd>Open now</dd></div>
     </dl>
     <div class="event-action">
-      <a class="button button-primary cfp-home-cta" href="{{ "/cfp/2026/" | relURL }}">View the Call for Papers <span aria-hidden="true">&#8594;</span></a>
+      <a class="button button-primary cfp-home-cta" href="{{ "/2026/" | relURL }}">View the 2026 conference <span aria-hidden="true">&#8594;</span></a>
+      <a class="button button-secondary" href="{{ $event.registration_url }}" target="_blank" rel="noopener noreferrer">Register <span aria-hidden="true">&#8599;</span></a>
     </div>
   </div>
 </section>

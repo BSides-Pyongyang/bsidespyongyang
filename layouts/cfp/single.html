@@ -4,11 +4,11 @@
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="shell hero-content">
     <p class="eyebrow">{{ $event.name }}</p>
-    <h1>Call for<br>Papers</h1>
-    <p class="hero-summary">Bring original DPRK-focused cybersecurity research to a global virtual audience on {{ $event.date_display }}.</p>
-    <p class="deadline">Submissions close <time datetime="{{ $event.cfp.closes }}">{{ $event.cfp.closes_display }}</time>.</p>
+    <h1>Call for Papers<br>Closed</h1>
+    <p class="hero-summary">Thank you to everyone who submitted research for BSides Pyongyang 2026.</p>
+    <p class="deadline">Registration is now open for the virtual conference on <time datetime="{{ $event.date }}">{{ $event.date_display }}</time>.</p>
     <div class="button-row">
-      <a class="button button-primary" href="{{ $event.cfp.form_url }}" target="_blank" rel="noopener noreferrer">Submit a proposal <span aria-hidden="true">&#8599;</span></a>
+      <a class="button button-primary" href="{{ $event.registration_url }}" target="_blank" rel="noopener noreferrer">Register for the conference <span aria-hidden="true">&#8599;</span></a>
       <a class="button button-ghost" href="{{ $event.cfp.pdf_url | relURL }}" download>Download CFP <span aria-hidden="true">PDF</span></a>
     </div>
   </div>
@@ -97,12 +97,12 @@
 <section class="section cta-section">
   <div class="shell cta-layout">
     <div>
-      <p class="eyebrow">Deadline: {{ $event.cfp.closes_display }}</p>
-      <h2>Share your research.</h2>
-      <p>Questions can be sent to <a href="mailto:{{ site.Params.contactEmail }}">{{ site.Params.contactEmail }}</a>.</p>
+      <p class="eyebrow">18 November 2026</p>
+      <h2>Join the conference.</h2>
+      <p>Registration is open. Questions can be sent to <a href="mailto:{{ site.Params.contactEmail }}">{{ site.Params.contactEmail }}</a>.</p>
     </div>
     <div class="button-row">
-      <a class="button button-primary" href="{{ $event.cfp.form_url }}" target="_blank" rel="noopener noreferrer">Submit a proposal <span aria-hidden="true">&#8599;</span></a>
+      <a class="button button-primary" href="{{ $event.registration_url }}" target="_blank" rel="noopener noreferrer">Register now <span aria-hidden="true">&#8599;</span></a>
       <a class="button button-secondary" href="{{ $event.cfp.pdf_url | relURL }}" download>Download overview</a>
     </div>
   </div>

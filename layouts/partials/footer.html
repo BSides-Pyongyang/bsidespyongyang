@@ -1,5 +1,8 @@
 <footer class="site-footer" id="contact">
   <div class="shell footer-grid">
+    <div class="footer-brand">
+      <img src="{{ (index site.Data.events site.Params.currentEvent).brand_logo_image | relURL }}" alt="BSides Pyongyang brand logo" width="96" height="96">
+    </div>
     <div>
       <p class="eyebrow">Stay in touch</p>
       <h2>BSides Pyongyang</h2>

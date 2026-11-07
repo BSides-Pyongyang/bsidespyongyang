@@ -784,8 +784,15 @@ h3 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
   gap: 4rem;
+}
+
+.footer-brand img {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
 }
 
 .footer-email {
