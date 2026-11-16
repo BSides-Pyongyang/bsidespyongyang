@@ -1,5 +1,5 @@
 +++
-title = "2026 Schedule"
+title = "Schedule"
 description = "The full program for BSides Pyongyang 2026, streaming online on 18 November."
 eyebrow = "2026 conference"
 +++
