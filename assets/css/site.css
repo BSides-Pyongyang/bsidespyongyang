@@ -714,6 +714,97 @@ h3 {
   background: var(--signal);
 }
 
+.schedule-section {
+  padding-top: clamp(2.5rem, 6vw, 5rem);
+}
+
+.schedule-list {
+  max-width: 58rem;
+}
+
+.schedule-slot {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 0.85rem;
+  padding: 1.35rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(13, 40, 50, 0.06);
+}
+
+.schedule-break {
+  align-items: center;
+  padding-block: 0.8rem;
+  background: var(--surface-strong);
+  color: var(--muted);
+  font-family: var(--font-ui);
+}
+
+.schedule-time {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.schedule-duration {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.schedule-tag {
+  display: inline-block;
+  color: var(--signal);
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.schedule-tag.keynote { color: var(--brand-strong); }
+.schedule-tag.crypto { color: #9a6b00; }
+.schedule-tag.osint { color: #24764a; }
+.schedule-tag.concert,
+.schedule-tag.sep { color: var(--muted); }
+
+:root[data-theme="dark"] .schedule-tag.crypto { color: #f0c75e; }
+:root[data-theme="dark"] .schedule-tag.osint { color: #72d49a; }
+
+.schedule-title {
+  margin: 0.35rem 0 0.25rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.2;
+}
+
+.schedule-speaker {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--font-ui);
+  font-size: 0.94rem;
+}
+
+.schedule-slot details { margin-top: 0.65rem; }
+.schedule-slot summary {
+  color: var(--brand-strong);
+  cursor: pointer;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+.schedule-slot summary::marker { color: var(--signal); }
+.schedule-slot details p { margin: 0.7rem 0 0; }
+
+@media (max-width: 560px) {
+  .schedule-slot { grid-template-columns: 1fr; gap: 0.35rem; padding: 1.1rem; }
+  .schedule-break { grid-template-columns: 1fr; }
+}
+
 .talk-list {
   border-top: 1px solid var(--line);
 }

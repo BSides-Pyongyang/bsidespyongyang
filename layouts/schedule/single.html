@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{- $event := index site.Data.events site.Params.currentEvent -}}
+<article class="schedule-page">
+  <header class="document-hero">
+    <div class="shell document-shell">
+      <p class="eyebrow">{{ .Params.eyebrow | default "BSides Pyongyang" }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="document-summary">{{ .Description }} {{ $event.date_display }} · {{ $event.schedule_hours }} ET</p>
+    </div>
+  </header>
+  <section class="section schedule-section" aria-label="Conference program">
+    <div class="shell schedule-list">
+      {{ partial "schedule-entries.html" . }}
+    </div>
+  </section>
+</article>
+{{ end }}
