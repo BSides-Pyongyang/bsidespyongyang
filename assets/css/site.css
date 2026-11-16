@@ -205,6 +205,36 @@ h3 {
   text-decoration: none;
 }
 
+.nav-group {
+  position: relative;
+}
+
+.nav-submenu {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: -1rem;
+  display: none;
+  min-width: 11rem;
+  padding: 0.45rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+
+.nav-group:hover .nav-submenu,
+.nav-group:focus-within .nav-submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-nav .nav-submenu a {
+  padding: 0.65rem 0.75rem;
+  white-space: nowrap;
+}
+
 .site-nav a::after {
   position: absolute;
   right: 0;
@@ -982,6 +1012,22 @@ h3 {
 
   .site-nav a {
     padding: 0.85rem;
+  }
+
+  .site-nav .nav-submenu {
+    position: static;
+    display: flex;
+    min-width: 0;
+    padding: 0 0 0 1rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: inherit;
+  }
+
+  .site-nav .nav-submenu a {
+    padding: 0.65rem 0.85rem;
   }
 
   .header-actions {

@@ -14,8 +14,12 @@
     <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-nav>
       <a href="{{ "/#about" | relURL }}">About</a>
       <a href="{{ "/code-of-conduct/" | relURL }}">Conduct</a>
-      <a href="{{ "/2026/" | relURL }}">2026 conference</a>
-      <a href="{{ "/2026/schedule/" | relURL }}">Schedule</a>
+      <div class="nav-group">
+        <a href="{{ "/2026/" | relURL }}">2026 conference</a>
+        <div class="nav-submenu">
+          <a href="{{ "/2026/schedule/" | relURL }}">Schedule</a>
+        </div>
+      </div>
       <a href="{{ "/archive/2025/" | relURL }}">2025 conference</a>
       <a href="{{ $event.registration_url }}" target="_blank" rel="noopener noreferrer">Register</a>
       <a href="{{ "/#contact" | relURL }}">Contact</a>
