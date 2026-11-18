@@ -24,6 +24,15 @@
 <meta name="twitter:description" content="{{ $description }}">
 <meta name="twitter:image" content="{{ $socialImage }}">
 <link rel="icon" href="{{ $favicon | relURL }}" type="image/png">
+{{- if and site.Params.googleAnalyticsID (not hugo.IsServer) -}}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.googleAnalyticsID }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.Params.googleAnalyticsID }}');
+</script>
+{{- end -}}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>

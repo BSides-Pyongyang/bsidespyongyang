@@ -9,6 +9,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
   contactEmail = "bsidespyongyang@gmail.com"
   currentEvent = "2026"
   socialImage = "/images/logo-2026.png"
+  googleAnalyticsID = "G-K98VMS02ZK"
 
 [markup.goldmark.renderer]
   unsafe = false
